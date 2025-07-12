@@ -377,9 +377,6 @@ selectedItems.forEach(selected => {
         goodsPrice = 8000;
     }
     
-    
-    
-    
     // 구매 버튼이 눌린 상품을 나열하는 공간의 가져옴
     const itemsContainer = document.getElementById('itemsContainer');
     // 상품 내용을 담을 div 생성
