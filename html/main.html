@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-chubby/css/uicons-regular-chubby.css'>
+</head>
+<!-- 메인 화면이 켜지면 상품 나열 + 팝업 띄우기 -->
+<body onload="loads('items.html')">
+    <!-- 헤더 (로고, 기본 요소, 상품 메뉴) : 고정 -->
+    <header>
+        <div id="top">
+            <!-- 로고 : 클릭 시 첫화면처럼 상품 나열-->
+            <a href="main.html"><img src="../image/logo.png"></a>
+            <!-- 기본 요소 -->
+            <ul>
+                <li>회원가입</li>
+                <li>로그인</li>
+                <li>프로필</li>
+                <li>찜</li>
+                <!-- 장바구니 메뉴 이동 가능 -->
+                <li><a href="#" onclick="loadPage('shopping-bag.html')">장바구니</a></li>
+            </ul>
+        </div>
+        <!-- 상품 메뉴 -->
+        <div id="menu">
+            <!-- 메뉴 5개, 제로웨이스트란? 메뉴, 장바구니 메뉴 이동 가능 -->
+            <ul>
+                <li><a href="#" onclick="loadPage('explain.html')">제로웨이스트란?</a></li>
+                <li><a href="#" onclick="loadPage('bathroom.html')">욕실 용품</a></li>
+                <li>주방 용품</li>
+                <li>패션</li>
+                <li>학용품</li>
+            </ul>
+        </div>
+    </header>
+    <!-- 변하는 부분 -->
+    <main>
+        <iframe id="contentFrame" src="" width="100%" height="100%" style="border:none;"></iframe>
+    </main>
+    <hr>
+    <!-- footer 기본 요소 : 고정 -->
+    <footer>
+        <!-- 목록 삽입 -->
+        <ul id="up">
+            <!-- 개인정보처리방침 -->
+            <li>개인정보처리방침</li>
+            <!-- 저작권 -->
+            <li>저작권보호정책</li>
+            <li>이용약관</li>
+        </ul>
+        <ul id="down">
+            <li><span>회사명</span> Green Waves</li>
+            <li><span>대표자</span> 전수안</li>
+            <li><span>주소</span> (43010) 대구광역시 달성군 구지면 창리로11길 93</li>
+            <li><span>이메일</span> dgsw.of.kr</li>
+        </ul>
+        <ul id="down2">
+            <li><span>사업자등록번호</span> 812-02-17912</li>
+            <li><span>개인정보보호책임자</span> 이재원</li>
+            <!-- 연락처 -->
+            <li><span>고객센터</span> 82-4234-1214</li>
+        </ul>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

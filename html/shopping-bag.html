@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/shopping-bag.css">
+</head>
+<body>
+    <div id="title">
+        <h2>장바구니</h2>
+    </div>
+    <!-- 구매 버튼을 누른 상품 나열 -->
+    <div id="itemsContainer">
+    </div>
+    <!-- 총계 안내 -->
+    <div id="bottom">
+        <h4 id="itemP">상품 합계 :</h4>
+        <input type="text" id="totalItem" disabled>
+        <h4 id="delever">배송비 : 5000₩</h4>
+        <h4 id="totalTitle">총계 : </h4>
+        <input type="text" id="totalFee" disabled>
+        <button type="button">구매</button>
+    </div>
+    <script type="module" src="../js/shopping-bag.js"></script>
+</body>
+</html>

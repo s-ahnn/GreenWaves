@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: fit-content;
+    justify-items: center;
+}
+/* 제목 (제로웨이스트란?) */
+#title {
+    background-color: #36cd98;
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+    justify-items: center;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+
+h2 {
+    color: white;
+    margin: 0px;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 1em;
+}
+/* 제로웨이스트 개념 */
+#concept {
+    margin-top: 15px;
+    background-color: #f3fbfb;
+    width: 90vw;
+    /* height: 200px; */
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+}
+
+p {
+    line-height: 20px;
+    font-size: 1em;
+}
+
+span {
+    font-weight: 600;
+}
+/* 제목 (제로웨이스트 실천 5R 원칙) */
+#title2 {
+    background-color: #36cd98;
+    display: inline-block;
+    width: 500px;
+    height: 35px;
+    text-align: center;
+    justify-items: center;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+/* 내용 (제로웨이스트 실천 5R 원칙) */
+table {
+    margin-top: 15px;
+    border: 1px solid #36cd98;
+    border-radius: 10px;
+}
+
+th {
+    width: 5vw;
+    height: 3vh;
+    border-right: 1px solid #36cd98;
+    font-size: 0.8em;
+}
+
+td {
+    width: 35vw;
+    padding: 10px;
+}
+
+/* 반응형 웹 구현 */
+@media screen and (max-width: 925px) {
+    /* 제로웨이스트 개념 박스 */
+    #concept {
+        width: 90vw;
+        padding: 10px;
+        height: auto;
+        word-break: keep-all;
+        margin: 0 auto;
+    }
+
+    /* 본문 텍스트 */
+    p {
+        font-size: medium;
+        line-height: 22px;
+    }
+}

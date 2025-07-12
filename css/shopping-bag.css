@@ -1,0 +1,366 @@
+body {
+    width: 100%;
+    justify-items: center;
+}
+/* 장바구니 제목 */
+#title {
+    background-color: #36cd98;
+    display: inline-block;
+    width: 300px;
+    height: 35px;
+    text-align: center;
+    justify-items: center;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+
+#title h2 {
+    color: white;
+    margin: 0px;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 1em;
+}
+/* 구매 버튼을 누른 상품이 뜨는 곳 */
+#itemsContainer {
+    width: 100%;
+    min-height: fit-content;
+    justify-items: center;
+}
+/* 구매 버튼을 누른 상품 */
+.items {
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 50vw;
+    height: 170px;
+    background-color: #f3fbfb;
+    position: relative;
+}
+/* 상품 이미지 */
+img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 130px;
+    height: 130px;
+}
+/* 상품명 */
+h3 {
+    position: absolute;
+    top: 15px;
+    left: 160px;
+    margin-left: 10px;
+    font-size: 1em;
+}
+/* 상품 설명 */
+.explain1 {
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+
+.explain2 {
+    position: absolute;
+    top: 55px;
+    left: 160px;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+/* 가격 */
+.price {
+    position: absolute;
+    top: 80px;
+    left: 160px;
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+/* 갯수 */
+.countDiv {
+    position: absolute;
+    top: 125px;
+    left: 160px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 20px;
+}
+.count {
+    position: static;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+}
+.cntInput {
+    position: static;
+    margin: 0;
+    width: 30px;
+}
+/* 삭제 버튼 */
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: 0px solid black;
+    background-color: #36cd98;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+}
+/* 구매 버튼 */
+.pay {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    border: 0px solid black;
+    background-color: #36cd98;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+}
+/* 상품별 총계 (상품 가격 * 갯수) */
+.totPrice {
+    position: absolute;
+    bottom: 25px;
+    right: 70px;
+}
+/* 상품 전체 출력 칸 */
+#bottom {
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 50vw;
+    height: 85px;
+    background-color: #f3fbfb;
+    position: relative;
+}
+
+#itemP {
+    font-weight: 500;
+    position: absolute;
+    left: 20px;
+}
+/* 상품 전체 총 가격 */
+#totalItem {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+}
+/* 배송비 */
+#delever {
+    position: absolute;
+    left: 20px;
+    bottom: 0px;
+    font-size: 0.9em;
+}
+
+#totalTitle {
+    position: absolute;
+    right: 235px;
+    bottom: 0px;
+    margin: 15px 0px;
+}
+/* 상품 전체 총 가격 + 배송비 */
+#totalFee {
+    position: absolute;
+    right: 80px;
+    bottom: 17px;
+}
+/* 상품 전체 구매 버튼 */
+#bottom button {
+    position: absolute;
+    bottom: 17px;
+    right: 15px;
+    border: 0px solid black;
+    background-color: #36cd98;
+    color: white;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+/* 반응형 웹 구현 */
+@media (max-width: 880px) {
+    .items {
+        width: 50%;
+        min-width: 300px;
+        height: auto;
+        min-height: 320px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    
+    /* 상품 이미지 */
+    img {
+        position: static;
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+    
+    /* 상품명 */
+    h3 {
+        position: static;
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    /* 상품 설명 */
+    .explain1 {
+        position: static;
+        margin: 0 0 5px 0;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .explain2 {
+        position: static;
+        margin: 0 0 10px 0;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    /* 가격 */
+    .price {
+        position: static;
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+    /* 갯수 */
+    .countDiv {
+        position: static;
+        order: 7;
+    }
+    .count {
+        position: static;
+        bottom: 30px;
+        font-size: 14px;
+        margin: 0px;
+    }
+    .cntInput {
+        position: static;
+        width: 30px;
+        display: inline-block;
+    }
+    
+    /* 총 가격 */
+    .totPrice {
+        position: static;
+        margin: 10px 0px;
+        order: 8;
+    }
+    
+    /* 버튼 (구매, 삭제) */
+    .butts {
+        order: 9;
+    }
+    /* 삭제 버튼 */
+    .delete {
+        position: static;
+        margin: 0 5px 0 0;
+        border: 0px solid black;
+        background-color: #36cd98;
+        color: white;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    /* 구매 버튼 */
+    .pay {
+        position: static;
+        margin: 0 0 0 5px;
+        border: 0px solid black;
+        background-color: #36cd98;
+        color: white;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    
+    /* 하단 전체 출력 칸 */
+    #bottom {
+        width: 50vw;
+        min-width: 300px;
+        height: 85px;
+        min-height: 100px;
+        padding: 15px;
+        box-sizing: border-box;
+        margin-top: 15px;
+        border-radius: 15px;
+        background-color: #f3fbfb;
+        position: relative;
+    }
+    
+    /* 상품 가격 합계 라벨 */
+    #itemP {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 2px;
+    }
+    
+    /* 상품 가격 합계 출력칸 */
+    #totalItem {
+        position: absolute;
+        top: 15px;
+        left: 80px;
+        font-size: 13px;
+    }
+    
+    /* 배송비 */
+    #delever {
+        position: absolute;
+        left: 15px;
+        bottom: 40px;
+        margin: 0px;
+        font-size: 14px;
+    }
+    
+    /* 총 가격 라벨 */
+    #totalTitle {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        font-size: 14px;
+        margin: 0px;
+    }
+    
+    /* 총 가격 (상품 가격 합계 + 배송비) */
+    #totalFee {
+        position: absolute;
+        left: 50px;
+        bottom: 12px;
+        font-size: 13px;
+        width: 90px;
+    }
+    
+    /* 전체 상품 구매 버튼 */
+    #bottom button {
+        position: absolute;
+        bottom: 12px;
+        right: 15px;
+        border: 0px solid black;
+        background-color: #36cd98;
+        color: white;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
