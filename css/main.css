@@ -30,7 +30,7 @@
     display: flex;
     list-style: none;
     padding-left: 0px;
-    background-color: #39d8a0;
+    background-color: #36cd70;
     height: 50px;
     margin-bottom: 0px;
 }
@@ -46,7 +46,7 @@
 }
 /* 상품 메뉴에 커서 올리면 변화 */
 #menu li:hover {
-    background-color: #36cd98;
+    background-color: #37c76e;
 }
 /* footer 기본 요소 */
 footer {
@@ -55,7 +55,7 @@ footer {
 }
 
 footer ul {
-    color: #36cd98;
+    color: #36cd70;
     list-style: none;
 }
 
