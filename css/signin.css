@@ -1,0 +1,47 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: #36cd70;
+}
+
+h3 {
+    margin: 10px;
+    color: #36cd70;
+}
+
+fieldset {
+    border-radius: 30px;
+    width: 25%;
+    margin: 5px;
+}
+
+legend {
+    font-size: 0.9em;
+}
+
+input {
+    border: 0px solid black;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: 0px solid black;
+    background-color: #36cd70;
+    color: white;
+    width: 20%;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
