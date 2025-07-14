@@ -45,3 +45,7 @@ button {
     border-radius: 30px;
     margin-top: 15px;
 }
+
+small {
+    margin-top: 10px;
+}
