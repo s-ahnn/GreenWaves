@@ -9,23 +9,29 @@
 <body>
     <h2><span>Green Waves</span>에 오신 걸 환영합니다!</h2>
     <h3>회원 가입</h3>
-    <fieldset>
-        <legend>아이디</legend>
-        <input type="text" placeholder="아이디를 입력하세요.">
-    </fieldset>
-    <fieldset>
-        <legend>비밀번호</legend>
-        <input type="password" placeholder="비밀번호를 입력하세요.">
-    </fieldset>
-    <fieldset>
-        <legend>비밀번호 확인</legend>
-        <input type="password" placeholder="비밀번호를 다시 입력하세요.">
-    </fieldset>
-    <fieldset>
-        <legend>이메일</legend>
-        <input type="email" placeholder="이메일을 입력하세요.">
-    </fieldset>
-    <button type="submit"><a href="signup2.html" style="color: white; text-decoration: none;">다음으로</a></button>
+    <form action="http://127.0.0.1:3000/register" method="POST" id="signForm">
+        <fieldset>
+            <legend>아이디</legend>
+            <input type="text" placeholder="아이디를 입력하세요." name="username" id="userID" required>
+            <div class="error" id="usernameError"></div>
+        </fieldset>
+        <fieldset>
+            <legend>비밀번호</legend>
+            <input type="password" placeholder="비밀번호를 입력하세요." name="password" id="password" required>
+            <div class="error" id="passwordError"></div>
+        </fieldset>
+        <fieldset>
+            <legend>비밀번호 확인</legend>
+            <input type="password" placeholder="비밀번호를 다시 입력하세요." name="confirm-password" id="confirm" required>
+            <div class="error" id="confirm-passwordError"></div>
+        </fieldset>
+        <fieldset>
+            <legend>이메일</legend>
+            <input type="email" placeholder="이메일을 입력하세요." name="email" id="email" required>
+            <div class="error" id="emailError"></div>
+        </fieldset>
+        <button type="submit">다음으로</button>
+    </form>
 
     <small>계정이 있나요? <a href="signin.html" style="text-decoration: none; color: #36cd70;">로그인</a></small>
 
