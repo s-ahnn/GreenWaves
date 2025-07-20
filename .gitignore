@@ -1,1 +1,2 @@
-userInfo/
+userInfo/*
+!userInfo/server.js
