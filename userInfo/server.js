@@ -278,6 +278,66 @@ app.post('/register/final', (req, res) => {
   stmt.finalize();
 });
 
+// 🔵 [POST] 로그인 API
+app.post('/api/login', (req, res) => {
+  console.log('🔍 /api/login 요청 받음:', req.body);
+  
+  const { userId, password } = req.body;
+
+  // 입력값 검증
+  if (!userId || !password) {
+    console.log('❌ 필수 필드 누락');
+    return res.status(400).json({ 
+      success: false, 
+      message: '아이디와 비밀번호를 모두 입력해주세요.' 
+    });
+  }
+
+  // DB에서 사용자 조회
+  db.get('SELECT * FROM users WHERE username = ?', [userId], (err, row) => {
+    if (err) {
+      console.error('❌ DB 조회 오류:', err);
+      return res.status(500).json({ 
+        success: false, 
+        message: '서버 오류가 발생했습니다.' 
+      });
+    }
+
+    if (!row) {
+      console.log('❌ 존재하지 않는 아이디:', userId);
+      return res.status(401).json({ 
+        success: false, 
+        message: '존재하지 않는 아이디입니다.' 
+      });
+    }
+
+    // 비밀번호 확인
+    if (password === row.password) {
+      console.log('✅ 로그인 성공:', userId);
+      
+      // 세션에 로그인 정보 저장
+      req.session.user = {
+        id: row.id,
+        username: row.username,
+        name: row.name,
+        email: row.email
+      };
+
+      return res.json({ 
+        success: true, 
+        message: '로그인 성공',
+        userId: row.username 
+      });
+    } else {
+      console.log('❌ 비밀번호 불일치:', userId);
+      return res.status(401).json({ 
+        success: false, 
+        message: '비밀번호가 틀렸습니다.' 
+      });
+    }
+  });
+});
+
 // 🔧 에러 핸들링 미들웨어
 app.use((err, req, res, next) => {
   console.error('💥 서버 에러:', err);
